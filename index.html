@@ -917,15 +917,15 @@ body{
 .hero .meta span strong{color:var(--ink);font-weight:600}
 
 /* COPA BANNER */
-.copa-banner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;text-decoration:none;color:var(--ink);background:linear-gradient(110deg,var(--ip-mint) 0%,var(--ip-yellow) 100%);border:1.5px solid var(--ink);border-radius:18px;padding:22px 26px;margin-bottom:48px;box-shadow:5px 5px 0 var(--ink);transition:transform .18s ease,box-shadow .18s ease;position:relative;overflow:hidden}
-.copa-banner:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--ink)}
-.copa-banner .cb-left{display:flex;flex-direction:column;gap:6px;position:relative;z-index:1;max-width:640px}
-.copa-banner .cb-kicker{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-60)}
-.copa-banner .cb-title{font-family:'Archivo Black',sans-serif;font-size:clamp(26px,4vw,40px);line-height:.95;letter-spacing:-.02em}
+.copa-banner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;text-decoration:none;color:var(--ink);background:linear-gradient(110deg,var(--ip-mint) 0%,var(--ip-yellow) 100%);border:1.5px solid var(--ink);border-radius:14px;padding:13px 20px;margin-bottom:40px;box-shadow:4px 4px 0 var(--ink);transition:transform .18s ease,box-shadow .18s ease;position:relative;overflow:hidden}
+.copa-banner:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.copa-banner .cb-left{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
+.copa-banner .cb-kicker{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-60)}
+.copa-banner .cb-title{font-family:'Archivo Black',sans-serif;font-size:clamp(17px,2.4vw,24px);line-height:1;letter-spacing:-.02em}
 .copa-banner .cb-sub{font-size:14px;color:var(--ink);line-height:1.35}
-.copa-banner .cb-cta{font-family:'Archivo Black',sans-serif;font-size:16px;white-space:nowrap;border:1.5px solid var(--ink);background:#fff;border-radius:999px;padding:12px 20px;box-shadow:3px 3px 0 var(--ink);position:relative;z-index:1}
-.copa-banner .cb-ball{position:absolute;right:-28px;top:-28px;width:130px;height:130px;border:1.5px solid var(--ink);border-radius:50%;opacity:.18;pointer-events:none}
-.copa-banner .cb-ball::before{content:"";position:absolute;inset:22px;border:1.5px solid var(--ink);border-radius:50%}
+.copa-banner .cb-cta{font-family:'Archivo Black',sans-serif;font-size:14px;white-space:nowrap;border:1.5px solid var(--ink);background:#fff;border-radius:999px;padding:9px 16px;box-shadow:2px 2px 0 var(--ink);position:relative;z-index:1}
+.copa-banner .cb-ball{position:absolute;right:-22px;top:-22px;width:84px;height:84px;border:1.5px solid var(--ink);border-radius:50%;opacity:.16;pointer-events:none}
+.copa-banner .cb-ball::before{content:"";position:absolute;inset:15px;border:1.5px solid var(--ink);border-radius:50%}
 
 /* KPIS */
 .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px}
@@ -1145,16 +1145,6 @@ a.manchete-item:hover .manchete-text{text-decoration:underline;text-decoration-t
     </div>
   </section>
 
-  <a class="copa-banner" href="https://radar-mutato-copa-do-mundo.netlify.app/" target="_blank" rel="noopener">
-    <span class="cb-ball"></span>
-    <span class="cb-left">
-      <span class="cb-kicker">⚽ Radar especial · ao vivo</span>
-      <span class="cb-title">Radar Copa do Mundo 2026</span>
-      <span class="cb-sub">Radar cultural dedicado à Copa — territórios, triggers e oportunidades de marca ao longo de todo o torneio.</span>
-    </span>
-    <span class="cb-cta">Abrir radar ↗</span>
-  </a>
-
   <div class="kpis">
     <div class="kpi" data-color="yellow">
       <div class="label">Tendências qualificadas</div>
@@ -1205,6 +1195,15 @@ a.manchete-item:hover .manchete-text{text-decoration:underline;text-decoration-t
       <span class="arrow">→</span>
     </button>
   </nav>
+
+  <a class="copa-banner" href="https://radar-mutato-copa-do-mundo.netlify.app/" target="_blank" rel="noopener">
+    <span class="cb-ball"></span>
+    <span class="cb-left">
+      <span class="cb-kicker">⚽ Radar especial</span>
+      <span class="cb-title">Radar Copa do Mundo 2026</span>
+    </span>
+    <span class="cb-cta">Abrir radar ↗</span>
+  </a>
 
   <div id="tab-manchetes" class="tab-panel active">
     <div class="section-head">
