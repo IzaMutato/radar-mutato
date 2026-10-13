@@ -18,127 +18,472 @@
     "nota": "Coleta via Inoreader + análise TATO"
   },
   "sintese": [
-    {
-      "id": "paulinho-tiny-desk",
-      "titulo": "Paulinho da Viola — Tiny Desk Brasil",
-      "descricao": "Lenda do samba relembra 6 décadas em novo episódio do Tiny Desk Brasil (YouTube). Apresentação com família e convidados.",
-      "janela": "quente",
-      "territorios": ["música", "cultura", "legado", "youtube"],
-      "clientes_aplicaveis": ["loreal-luxo"],
-      "score": {"volume": 2, "velocidade": 2, "fit_br": 3, "ativacao": 2, "total": 9},
-      "referencias": [
-        {"titulo": "Paulinho da Viola relembra 6 décadas de história", "fonte": "Rolling Stone Brasil", "url": "https://rollingstone.com.br/musica/paulinho-da-viola-relembra-6-decadas-de-historia-em-novo-episodio-do-tiny-desk-brasil/", "data": "2026-10-13"}
-      ]
-    },
-    {
-      "id": "netflix-copa-2030",
-      "titulo": "Netflix × Copa 2030 — Streaming Revolution",
-      "descricao": "Netflix fecha acordo exclusivo para transmitir 104 jogos da Copa 2030 na Espanha e Andorra. Primeiro grande torneio em streaming.",
-      "janela": "quente",
-      "territorios": ["entretenimento", "streaming", "futebol", "inovação"],
-      "clientes_aplicaveis": [],
-      "score": {"volume": 3, "velocidade": 3, "fit_br": 3, "ativacao": 3, "total": 12},
-      "referencias": [
-        {"titulo": "Netflix fecha acordo para transmitir Copa do Mundo 2030", "fonte": "Exame", "url": "https://exame.com/esporte/netflix-fecha-acordo-para-transmitir-a-copa-do-mundo-de-2030-na-espanha-e-em-andorra/", "data": "2026-10-13"}
-      ]
-    },
-    {
-      "id": "ia-autoreplic-home",
-      "titulo": "IA Autorreplicante em Home Devices",
-      "descricao": "Anthropic publica pesquisa sobre autorreplicação de IA em aparelhos domésticos. Avanços significativos com limitações de hardware.",
-      "janela": "quente",
-      "territorios": ["tech", "ia", "futuro", "home-tech"],
-      "clientes_aplicaveis": ["toyota", "lexus"],
-      "score": {"volume": 2, "velocidade": 3, "fit_br": 2, "ativacao": 2, "total": 9},
-      "referencias": [
-        {"titulo": "IA pode estar a meses de se replicar em aparelhos domésticos", "fonte": "Exame", "url": "https://exame.com/inteligencia-artificial/ia-pode-estar-a-meses-de-se-replicar-em-aparelhos-domesticos-diz-claude/", "data": "2026-10-13"}
-      ]
-    },
-    {
-      "id": "apple-homeview",
-      "titulo": "Apple HomeView — Smart Home + Siri IA",
-      "descricao": "Apple lança HomeView: tela doméstica com Siri IA que reconhece até 6 usuários. Controle de casa inteligente integrado.",
-      "janela": "quente",
-      "territorios": ["tech", "apple", "smart-home", "lifestyle"],
-      "clientes_aplicaveis": [],
-      "score": {"volume": 2, "velocidade": 3, "fit_br": 1, "ativacao": 2, "total": 8},
-      "referencias": [
-        {"titulo": "Apple lança HomeView, tela com IA que reconhece moradores", "fonte": "Exame", "url": "https://exame.com/tecnologia/apple-lanca-homeview-tela-com-ia-que-reconhece-moradores-e-controla-a-casa/", "data": "2026-10-13"}
-      ]
-    },
-    {
-      "id": "turismo-gastronomia",
-      "titulo": "Turismo + Gastronomia em Crescimento",
-      "descricao": "Turismo brasileiro fatura R$ 25,5 bilhões em julho. Bares/restaurantes crescem +7,4% (11º mês seguido).",
-      "janela": "quente",
-      "territorios": ["gastronomia", "turismo", "economia", "lifestyle"],
-      "clientes_aplicaveis": ["woodford-reserve", "jack-daniels", "ipiranga", "ampm"],
-      "score": {"volume": 3, "velocidade": 2, "fit_br": 3, "ativacao": 3, "total": 11},
-      "referencias": [
-        {"titulo": "Turismo impulsiona bares e restaurantes em 2026", "fonte": "Valor Econômico", "url": "https://valor.globo.com/patrocinado/dino/noticia/2026/10/13/turismo-impulsiona-bares-e-restaurantes-em-2026-1.ghtml", "data": "2026-10-13"}
-      ]
-    }
-  ],
-  "triggers_por_cliente": {
-    "woodford-reserve": [
-      {"tendencia_id": "turismo-gastronomia", "tipo_acao": "content", "janela": "quente", "data_sugerida": "2026-10-14", "trigger_titulo": "Gastronomia + Beverage", "trigger_descricao": "Turismo em alta, bares crescem 7,4%", "racional": "Premium positioning na experiência gastronômica"}
-    ],
-    "jack-daniels": [
-      {"tendencia_id": "turismo-gastronomia", "tipo_acao": "post", "janela": "quente", "data_sugerida": "2026-10-14", "trigger_titulo": "Lifestyle + Experiência", "trigger_descricao": "Turismo fatura R$ 25,5 bi", "racional": "Oportunidade de lifestyle marketing"}
-    ],
-    "loreal-luxo": [
-      {"tendencia_id": "paulinho-tiny-desk", "tipo_acao": "listening", "janela": "quente", "data_sugerida": "2026-10-14", "trigger_titulo": "YouTube Creators", "trigger_descricao": "Tiny Desk Brasil partnership", "racional": "Conteúdo cultural premium"}
-    ],
-    "toyota": [
-      {"tendencia_id": "ia-autoreplic-home", "tipo_acao": "tech-watch", "janela": "quente", "data_sugerida": "2026-10-14", "trigger_titulo": "IA Autorreplicante", "trigger_descricao": "Futuro de veículos conectados", "racional": "Tech integration trend"}
-    ]
-  },
-  "calendario": [
-    {"data": "2026-10-13", "evento": "Paulinho da Viola — Tiny Desk Brasil", "tipo": "cultural", "tendencias_relacionadas": ["paulinho-tiny-desk"], "clientes_alvo": ["loreal-luxo"]},
-    {"data": "2026-11-01", "evento": "Apple HomeView Lançamento", "tipo": "tech", "tendencias_relacionadas": ["apple-homeview"], "clientes_alvo": []},
-    {"data": "2027-06-01", "evento": "Copa do Mundo Feminina 2027", "tipo": "comercial", "tendencias_relacionadas": ["turismo-gastronomia"], "clientes_alvo": ["woodford-reserve", "jack-daniels"]}
+    {"id": "paulinho", "titulo": "Paulinho da Viola — Tiny Desk Brasil", "descricao": "Lenda do samba relembra 6 décadas em novo episódio", "janela": "quente", "territorios": ["música"], "score": {"volume": 2, "velocidade": 2, "fit_br": 3, "total": 7}},
+    {"id": "netflix", "titulo": "Netflix × Copa 2030 — Streaming Revolution", "descricao": "Netflix fecha acordo para 104 jogos em Espanha e Andorra", "janela": "quente", "territorios": ["streaming"], "score": {"volume": 3, "velocidade": 3, "fit_br": 3, "total": 9}},
+    {"id": "ia", "titulo": "IA Autorreplicante em Home Devices", "descricao": "Anthropic publica pesquisa sobre autorreplicação de IA", "janela": "quente", "territorios": ["tech"], "score": {"volume": 2, "velocidade": 3, "fit_br": 2, "total": 7}},
+    {"id": "apple", "titulo": "Apple HomeView — Smart Home + Siri IA", "descricao": "Tela doméstica com IA que reconhece até 6 usuários", "janela": "quente", "territorios": ["tech"], "score": {"volume": 2, "velocidade": 3, "fit_br": 1, "total": 6}},
+    {"id": "turismo", "titulo": "Turismo + Gastronomia em Crescimento", "descricao": "Turismo fatura R$ 25,5 bi em julho, bares crescem 7,4%", "janela": "quente", "territorios": ["gastronomia"], "score": {"volume": 3, "velocidade": 2, "fit_br": 3, "total": 8}}
   ],
   "manchetes": [
-    {
-      "categoria": "cultura",
-      "categoria_label": "Cultura & Entretenimento",
-      "categoria_sub": "Música, Artes, Legado",
-      "color": "aqua",
-      "items": [
-        {"titulo": "Paulinho da Viola relembra 6 décadas de história em Tiny Desk Brasil", "fonte": "Rolling Stone Brasil", "data": "2026-10-13", "destaque": true, "url": "https://rollingstone.com.br/musica/paulinho-da-viola-relembra-6-decadas-de-historia-em-novo-episodio-do-tiny-desk-brasil/"}
-      ]
-    },
-    {
-      "categoria": "streaming",
-      "categoria_label": "Streaming & Media",
-      "categoria_sub": "Inovação em Distribuição",
-      "color": "lilac",
-      "items": [
-        {"titulo": "Netflix fecha acordo para transmitir Copa 2030", "fonte": "Exame", "data": "2026-10-13", "destaque": true, "url": "https://exame.com/esporte/netflix-fecha-acordo-para-transmitir-a-copa-do-mundo-de-2030-na-espanha-e-em-andorra/"}
-      ]
-    },
-    {
-      "categoria": "tech",
-      "categoria_label": "Tecnologia",
-      "categoria_sub": "IA, Smart Home, Futuro",
-      "color": "peach",
-      "items": [
-        {"titulo": "IA pode estar a meses de se replicar em aparelhos domésticos", "fonte": "Exame", "data": "2026-10-13", "destaque": false, "url": "https://exame.com/inteligencia-artificial/ia-pode-estar-a-meses-de-se-replicar-em-aparelhos-domesticos-diz-claude/"},
-        {"titulo": "Apple lança HomeView, tela com IA", "fonte": "Exame", "data": "2026-10-13", "destaque": false, "url": "https://exame.com/tecnologia/apple-lanca-homeview-tela-com-ia-que-reconhece-moradores-e-controla-a-casa/"}
-      ]
-    },
-    {
-      "categoria": "gastronomia",
-      "categoria_label": "Gastronomia & Turismo",
-      "categoria_sub": "Crescimento Econômico",
-      "color": "orange",
-      "items": [
-        {"titulo": "Turismo impulsiona bares e restaurantes em 2026", "fonte": "Valor Econômico", "data": "2026-10-13", "destaque": true, "url": "https://valor.globo.com/patrocinado/dino/noticia/2026/10/13/turismo-impulsiona-bares-e-restaurantes-em-2026-1.ghtml"}
-      ]
-    }
+    {"categoria": "cultura", "items": [{"titulo": "Paulinho da Viola relembra 6 décadas em Tiny Desk Brasil", "url": "https://rollingstone.com.br/musica/paulinho-da-viola-relembra-6-decadas-de-historia-em-novo-episodio-do-tiny-desk-brasil/"}]},
+    {"categoria": "streaming", "items": [{"titulo": "Netflix transmitirá Copa 2030", "url": "https://exame.com/esporte/netflix-fecha-acordo-para-transmitir-a-copa-do-mundo-de-2030-na-espanha-e-em-andorra/"}]},
+    {"categoria": "tech", "items": [{"titulo": "IA pode estar a meses de replicação em home devices", "url": "https://exame.com/inteligencia-artificial/ia-pode-estar-a-meses-de-se-replicar-em-aparelhos-domesticos-diz-claude/"}]},
+    {"categoria": "gastronomia", "items": [{"titulo": "Turismo impulsiona bares e restaurantes", "url": "https://valor.globo.com/patrocinado/dino/noticia/2026/10/13/turismo-impulsiona-bares-e-restaurantes-em-2026-1.ghtml"}]}
   ]
 }
 </script>
+<body>
 
+<div class="grain"></div>
+
+<div class="container">
+
+  <div class="topbar">
+    <div class="brand">
+      <span class="fingerprint"></span>
+      <span>Radar · Mutato</span>
+    </div>
+    <div class="right">
+      <span id="topbar-week">—</span>
+      <span class="status-pill" id="topbar-status">EXEMPLO</span>
+    </div>
+  </div>
+
+  <section class="hero">
+    <span class="tag">Radar · Semanal</span>
+    <h1>Radar <span class="slash">/</span> <span class="accent">da semana</span></h1>
+    <p class="subtitle">Mapeamento de <strong>tendências emergentes</strong> com potencial de ativação — leitura por território, triggers por cliente e janela de oportunidade pro time.</p>
+    <div class="meta">
+      <span>Semana <strong id="meta-semana">—</strong></span>
+      <span>Período <strong id="meta-periodo">—</strong></span>
+      <span>Geração <strong id="meta-geracao">—</strong></span>
+    </div>
+  </section>
+
+  <div class="kpis">
+    <div class="kpi" data-color="yellow">
+      <div class="label">Tendências qualificadas</div>
+      <div class="value" id="kpi-tend">0</div>
+      <div class="sub">com referência verificada</div>
+    </div>
+    <div class="kpi" data-color="pink">
+      <div class="label">Triggers prontos</div>
+      <div class="value" id="kpi-trig">0</div>
+      <div class="sub">acionáveis nesta semana</div>
+    </div>
+    <div class="kpi" data-color="mint">
+      <div class="label">Clientes ativados</div>
+      <div class="value" id="kpi-cli">0</div>
+      <div class="sub" id="kpi-cli-sub">de 10 no portfólio</div>
+    </div>
+    <div class="kpi" data-color="sky">
+      <div class="label">Eventos próximos 30d</div>
+      <div class="value" id="kpi-eve">0</div>
+      <div class="sub">no calendário cultural</div>
+    </div>
+  </div>
+
+  <nav class="tab-nav">
+    <button class="tab-btn active" data-tab="manchetes" data-color="lilac">
+      <span class="num">00 / 05</span>
+      <span class="label">Manchetes</span>
+      <span class="arrow">→</span>
+    </button>
+    <button class="tab-btn" data-tab="sintese" data-color="yellow">
+      <span class="num">01 / 05</span>
+      <span class="label">Síntese</span>
+      <span class="arrow">→</span>
+    </button>
+    <button class="tab-btn" data-tab="territorios" data-color="pink">
+      <span class="num">02 / 05</span>
+      <span class="label">Território</span>
+      <span class="arrow">→</span>
+    </button>
+    <button class="tab-btn" data-tab="triggers" data-color="mint">
+      <span class="num">03 / 05</span>
+      <span class="label">Triggers</span>
+      <span class="arrow">→</span>
+    </button>
+    <button class="tab-btn" data-tab="calendario" data-color="sky">
+      <span class="num">04 / 05</span>
+      <span class="label">Calendário</span>
+      <span class="arrow">→</span>
+    </button>
+  </nav>
+
+  <a class="copa-banner" href="https://izamutato.github.io/radar-copa-mundo-2026/" target="_blank" rel="noopener">
+    <span class="cb-ball"></span>
+    <span class="cb-left">
+      <span class="cb-kicker">⚽ Radar especial</span>
+      <span class="cb-title">Radar Copa do Mundo 2026</span>
+    </span>
+    <span class="cb-cta">Abrir radar ↗</span>
+  </a>
+
+  <div id="tab-manchetes" class="tab-panel active">
+    <div class="section-head">
+      <span class="num">00 / 05</span>
+      <h2>Manchetes da semana</h2>
+      <span class="hint">o que pegou a agenda — capa, entreterimento, mercado, esporte</span>
+    </div>
+    <div class="manchetes-grid" id="manchetes-grid"></div>
+  </div>
+
+  <div id="tab-sintese" class="tab-panel">
+    <div class="section-head">
+      <span class="num">01 / 05</span>
+      <h2>Síntese da semana</h2>
+      <span class="hint">tendências top-line transversais</span>
+    </div>
+    <div class="mock-notice" id="mock-notice"></div>
+    <div class="trend-grid" id="sintese-grid"></div>
+  </div>
+
+  <div id="tab-territorios" class="tab-panel">
+    <div class="section-head">
+      <span class="num">02 / 05</span>
+      <h2>Por território</h2>
+      <span class="hint">mapa por vertical com filtro de janela</span>
+    </div>
+    <div class="filters-bar">
+      <span class="filter-label">Filtrar janela:</span>
+      <button class="filter-btn active" data-filter="todos">Todas</button>
+      <button class="filter-btn" data-filter="quente">Quente</button>
+      <button class="filter-btn" data-filter="crescimento">Crescimento</button>
+      <button class="filter-btn" data-filter="formacao">Formação</button>
+    </div>
+    <div id="territorios-content"></div>
+  </div>
+
+  <div id="tab-triggers" class="tab-panel">
+    <div class="section-head">
+      <span class="num">03 / 05</span>
+      <h2>Triggers por cliente</h2>
+      <span class="hint">matriz acionável — selecione o cliente</span>
+    </div>
+    <div class="client-selector" id="client-selector"></div>
+    <div id="triggers-content"></div>
+  </div>
+
+  <div id="tab-calendario" class="tab-panel">
+    <div class="section-head">
+      <span class="num">04 / 05</span>
+      <h2>Janela de oportunidade</h2>
+      <span class="hint">próximas semanas — eventos × tendências × clientes</span>
+    </div>
+    <div id="calendario-content"></div>
+  </div>
+
+  <div class="footer">
+    <span>Mutato · Strategy + Cultural Intelligence</span>
+    <span>Radar · MVP-v1</span>
+  </div>
+
+</div>
+
+<script>
+const DATA = JSON.parse(document.getElementById('radar-data').textContent);
+
+const CLIENTES_LABELS = {
+  "woodford-reserve": "Woodford Reserve",
+  "jack-daniels": "Jack Daniel's",
+  "ipiranga": "Ipiranga",
+  "ampm": "AmPm",
+  "loreal-luxo": "L'Oréal Luxo",
+  "loreal-derma": "L'Oréal Beleza Derma",
+  "duracell": "Duracell",
+  "toyota": "Toyota",
+  "lexus": "Lexus",
+  "tgr": "TGR"
+};
+
+const TERRITORIO_LABELS = {
+  "beleza": "Beleza",
+  "antiaging": "Antiaging",
+  "comportamento": "Comportamento",
+  "bebidas-alcoolicas": "Bebidas alcoólicas",
+  "combustiveis": "Combustíveis & conveniência",
+  "esportes": "Esportes",
+  "automotivo": "Automotivo",
+  "entretenimento": "Entretenimento",
+  "mercado": "Mercado & negócios",
+  "k-pop": "K-pop",
+  "games": "Games",
+  "pets": "Pets",
+  "food": "Food"
+};
+
+const JANELA_LABELS = {
+  "quente": "Quente · 0-7d",
+  "crescimento": "Crescimento · 7-30d",
+  "formacao": "Formação · 30-90d"
+};
+
+const JANELA_HEAT_CLASS = {
+  "quente": "hot",
+  "crescimento": "crescimento",
+  "formacao": "formacao"
+};
+
+const TREND_COLORS = ["yellow", "pink", "mint", "sky", "peach", "lilac"];
+
+function fmtDate(iso) {
+  const [y, m, d] = iso.split('-');
+  return d + '/' + m;
+}
+function fmtDateFull(iso) {
+  const d = new Date(iso);
+  return d.toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' });
+}
+function fmtDay(iso) {
+  return iso.split('-')[2];
+}
+function fmtMonth(iso) {
+  const meses = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+  return meses[parseInt(iso.split('-')[1]) - 1];
+}
+
+// HEADER & META
+document.getElementById('topbar-week').textContent = DATA.meta.semana;
+document.getElementById('topbar-status').textContent = DATA.meta.tipo === 'exemplo' ? 'EXEMPLO' : 'AO VIVO';
+document.getElementById('meta-semana').textContent = DATA.meta.semana;
+document.getElementById('meta-periodo').textContent = DATA.meta.periodo;
+document.getElementById('meta-geracao').textContent = DATA.meta.gerado_em.split('T')[0];
+
+// KPIs
+const totalTriggers = Object.values(DATA.triggers_por_cliente).reduce((a, v) => a + v.length, 0);
+const clientesAtivados = Object.values(DATA.triggers_por_cliente).filter(v => v.length > 0).length;
+const today = new Date('2026-06-02');
+const eventos30d = DATA.calendario.filter(e => {
+  const d = new Date(e.data);
+  return d >= today && (d - today) / (1000 * 60 * 60 * 24) <= 30;
+}).length;
+
+document.getElementById('kpi-tend').textContent = DATA.sintese.length;
+document.getElementById('kpi-trig').textContent = totalTriggers;
+document.getElementById('kpi-cli').textContent = clientesAtivados;
+document.getElementById('kpi-cli-sub').textContent = 'de ' + Object.keys(DATA.triggers_por_cliente).length + ' no portfólio';
+document.getElementById('kpi-eve').textContent = eventos30d;
+
+// MOCK NOTICE
+if (DATA.meta.tipo === 'exemplo' && DATA.meta.nota) {
+  document.getElementById('mock-notice').innerHTML = '<strong>Exemplo ilustrativo</strong>' + DATA.meta.nota;
+} else {
+  document.getElementById('mock-notice').style.display = 'none';
+}
+
+// TAB SWITCHING
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const tab = btn.dataset.tab;
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + tab).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
+
+// MANCHETES
+function renderManchetes() {
+  const container = document.getElementById('manchetes-grid');
+  container.innerHTML = (DATA.manchetes || []).map(section => `
+    <section class="manchete-section" data-color="${section.color}">
+      <div class="manchete-section-head">
+        <h3>${section.categoria_label}</h3>
+        <span class="count">${section.items.length} manchete${section.items.length !== 1 ? 's' : ''}</span>
+        <span class="sub-label">${section.categoria_sub}</span>
+      </div>
+      <div class="manchete-list">
+        ${section.items.map((item, i) => {
+          const tag = item.url ? 'a' : 'div';
+          const href = item.url ? `href="${item.url}" target="_blank" rel="noopener"` : '';
+          return `
+            <${tag} class="manchete-item ${item.destaque ? 'destaque' : ''}" ${href}>
+              <span class="manchete-bullet">${item.destaque ? '★' : String(i + 1).padStart(2, '0')}</span>
+              <span class="manchete-text">${item.titulo}</span>
+              <span class="manchete-meta">${item.fonte} · ${fmtDate(item.data)}${item.url ? ' ↗' : ''}</span>
+            </${tag}>
+          `;
+        }).join('')}
+      </div>
+    </section>
+  `).join('');
+}
+
+// SÍNTESE
+function renderSintese() {
+  const grid = document.getElementById('sintese-grid');
+  grid.innerHTML = DATA.sintese.map((t, i) => {
+    const color = TREND_COLORS[i % TREND_COLORS.length];
+    const heatClass = JANELA_HEAT_CLASS[t.janela];
+    const idx = String(i + 1).padStart(2, '0');
+    const total = String(DATA.sintese.length).padStart(2, '0');
+    return `
+      <article class="trend-card" data-color="${color}">
+        <div class="trend-head">
+          <span class="trend-idx">Tendência ${idx} / ${total} · score ${t.score.total}/12</span>
+          <span class="heat ${heatClass}">${JANELA_LABELS[t.janela]}</span>
+        </div>
+        <h3 class="trend-title">${t.titulo}</h3>
+        <p class="trend-desc">${t.descricao}</p>
+        <div class="trend-tags-block">
+          <div class="sub">Territórios</div>
+          <div class="chips">
+            ${t.territorios.map(ter => `<span class="chip">${TERRITORIO_LABELS[ter] || ter}</span>`).join('')}
+          </div>
+        </div>
+        <div class="trend-tags-block">
+          <div class="sub">Clientes aplicáveis</div>
+          <div class="chips">
+            ${t.clientes_aplicaveis.map(c => `<span class="chip client">${CLIENTES_LABELS[c] || c}</span>`).join('')}
+          </div>
+        </div>
+        <div class="trend-refs">
+          ${t.referencias.map(r => `
+            <a class="ref" href="${r.url}" target="_blank" rel="noopener">
+              <span class="ref-title">${r.titulo}</span>
+              <span class="ref-meta">${r.fonte} · ${fmtDate(r.data)}</span>
+            </a>
+          `).join('')}
+        </div>
+      </article>
+    `;
+  }).join('');
+}
+
+// TERRITÓRIOS
+function renderTerritorios(filter = 'todos') {
+  const byTer = {};
+  DATA.sintese.forEach(t => {
+    if (filter !== 'todos' && t.janela !== filter) return;
+    t.territorios.forEach(ter => {
+      if (!byTer[ter]) byTer[ter] = [];
+      byTer[ter].push(t);
+    });
+  });
+  const container = document.getElementById('territorios-content');
+  const blocks = Object.keys(byTer).sort().map(ter => `
+    <section class="territory-block">
+      <h3>${TERRITORIO_LABELS[ter] || ter} <span class="count">${byTer[ter].length} tendência${byTer[ter].length > 1 ? 's' : ''}</span></h3>
+      ${byTer[ter].map(t => `
+        <div class="trend-mini-card">
+          <span class="heat ${JANELA_HEAT_CLASS[t.janela]}">${t.janela}</span>
+          <div class="mini-content">
+            <div class="mini-title">${t.titulo}</div>
+            <div class="mini-desc">${t.descricao.substring(0, 220)}${t.descricao.length > 220 ? '…' : ''}</div>
+          </div>
+        </div>
+      `).join('')}
+    </section>
+  `).join('');
+  container.innerHTML = blocks || '<div class="empty-state"><strong>Sem tendências nesta janela</strong>Selecione outro filtro pra ver os sinais qualificados.</div>';
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderTerritorios(btn.dataset.filter);
+  });
+});
+
+// TRIGGERS
+function renderTriggersForClient(clientKey) {
+  const triggers = DATA.triggers_por_cliente[clientKey] || [];
+  const container = document.getElementById('triggers-content');
+  if (triggers.length === 0) {
+    container.innerHTML = `<div class="empty-state"><strong>Sem trigger ativo nesta semana</strong>${CLIENTES_LABELS[clientKey]} foi avaliado mas nenhum sinal cultural cruzou o threshold de qualificação esta semana. Isso é esperado — o radar reflete o que de fato tem sinal, não preenche por preencher.</div>`;
+    return;
+  }
+  container.innerHTML = triggers.map(tr => {
+    const tend = DATA.sintese.find(t => t.id === tr.tendencia_id);
+    return `
+      <article class="trigger-card">
+        <div class="trigger-head">
+          <span class="action-type ${tr.tipo_acao}">${tr.tipo_acao}</span>
+          <span class="heat ${JANELA_HEAT_CLASS[tr.janela]}">${tr.janela}</span>
+          <span class="trigger-date">≤ ${fmtDateFull(tr.data_sugerida)}</span>
+        </div>
+        <h3 class="trigger-title">${tr.trigger_titulo}</h3>
+        <p class="trigger-desc">${tr.trigger_descricao}</p>
+        <div class="reco">
+          <div class="reco-label">Racional</div>
+          <p>${tr.racional}</p>
+        </div>
+        <div class="trigger-trend">Da tendência: <a href="#" onclick="document.querySelector('.tab-btn[data-tab=sintese]').click();return false;">${tend ? tend.titulo : tr.tendencia_id}</a></div>
+      </article>
+    `;
+  }).join('');
+}
+
+function renderClientSelector() {
+  const clients = Object.keys(DATA.triggers_por_cliente);
+  const selector = document.getElementById('client-selector');
+  selector.innerHTML = clients.map((c, i) => {
+    const count = DATA.triggers_por_cliente[c].length;
+    return `
+      <button class="client-btn ${i === 0 ? 'active' : ''}" data-client="${c}" data-empty="${count === 0}">
+        <div class="client-name">${CLIENTES_LABELS[c] || c}</div>
+        <div class="trigger-count">${count} trigger${count !== 1 ? 's' : ''}</div>
+      </button>
+    `;
+  }).join('');
+  selector.querySelectorAll('.client-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      selector.querySelectorAll('.client-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderTriggersForClient(btn.dataset.client);
+    });
+  });
+  if (clients.length > 0) renderTriggersForClient(clients[0]);
+}
+
+// CALENDÁRIO
+function renderCalendario() {
+  const today = new Date('2026-06-02');
+  const events = [...DATA.calendario].sort((a, b) => a.data.localeCompare(b.data));
+  const groups = { 'Esta semana': [], 'Próximas 4 semanas': [], 'Próximos meses': [] };
+  events.forEach(e => {
+    const ed = new Date(e.data);
+    const days = (ed - today) / (1000 * 60 * 60 * 24);
+    if (days <= 7) groups['Esta semana'].push(e);
+    else if (days <= 30) groups['Próximas 4 semanas'].push(e);
+    else groups['Próximos meses'].push(e);
+  });
+  const container = document.getElementById('calendario-content');
+  container.innerHTML = Object.entries(groups).filter(([_, evs]) => evs.length > 0).map(([label, evs]) => `
+    <section class="timeline-section">
+      <h3>${label}</h3>
+      ${evs.map(e => {
+        const tendsRelated = (e.tendencias_relacionadas || []).map(tid => {
+          const t = DATA.sintese.find(x => x.id === tid);
+          return t ? t.titulo : tid;
+        });
+        return `
+          <article class="event">
+            <div class="event-date">${fmtDay(e.data)}<span class="month">${fmtMonth(e.data)}</span></div>
+            <div>
+              <span class="event-type ${e.tipo}">${e.tipo}</span>
+              <h4>${e.evento}</h4>
+              <div class="event-meta">
+                ${tendsRelated.length > 0 ? `<span><strong>Tendências:</strong> ${tendsRelated.join(' · ')}</span>` : ''}
+                ${(e.clientes_alvo || []).length > 0 ? `<span><strong>Clientes alvo:</strong> ${e.clientes_alvo.map(c => CLIENTES_LABELS[c] || c).join(' · ')}</span>` : ''}
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('')}
+    </section>
+  `).join('');
+}
+
+renderManchetes();
+renderSintese();
+renderTerritorios();
+renderClientSelector();
+renderCalendario();
+</script>
 </body>
 </html>
