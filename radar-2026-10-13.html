@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RADAR CULTURAL MUTATO — 13 de Outubro de 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .meta {
+            font-size: 0.9em;
+            opacity: 0.8;
+            margin-top: 15px;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .insight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .insight-card {
+            background: #f8f9fa;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .insight-card:hover {
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .insight-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .insight-date {
+            font-size: 0.8em;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .insight-description {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: 500;
+        }
+
+        .insight-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+
+        .insight-link:hover {
+            text-decoration: underline;
+        }
+
+        .score-box {
+            background: #f0f4ff;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 12px;
+            font-size: 0.85em;
+        }
+
+        .score-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 3px 0;
+        }
+
+        .score-bar {
+            display: inline-block;
+            background: #667eea;
+            height: 4px;
+            border-radius: 2px;
+            width: 60px;
+            margin-left: 10px;
+        }
+
+        .headline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .headline {
+            padding: 15px;
+            background: white;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+        }
+
+        .headline-title {
+            font-weight: 600;
+            font-size: 0.95em;
+            color: #222;
+            margin-bottom: 8px;
+        }
+
+        .headline-meta {
+            font-size: 0.8em;
+            color: #999;
+        }
+
+        .headline-link {
+            display: inline-block;
+            margin-top: 8px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.8em;
+        }
+
+        .headline-link:hover {
+            text-decoration: underline;
+        }
+
+        .triggers-section {
+            background: #f0f4ff;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .client-card {
+            background: white;
+            padding: 18px;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .client-name {
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 12px;
+            font-size: 0.95em;
+        }
+
+        .trigger-list {
+            font-size: 0.85em;
+            line-height: 1.6;
+        }
+
+        .trigger-item {
+            padding: 6px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .trigger-item:last-child {
+            border-bottom: none;
+        }
+
+        .trigger-action {
+            display: inline-block;
+            background: #e8f1ff;
+            color: #667eea;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.75em;
+            font-weight: 500;
+            margin-right: 6px;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            .insight-grid, .headline-grid, .client-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 RADAR CULTURAL MUTATO</h1>
+            <p>Tendências Culturais — Coleta Automática</p>
+            <div class="meta">
+                <strong>Data:</strong> 13 de outubro de 2026 | <strong>Período:</strong> últimas 48h | <strong>Tipo:</strong> Real-time
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- SÍNTESE INSIGHTS -->
+            <div class="section">
+                <div class="section-title">📊 5 INSIGHTS PRINCIPAIS</div>
+                <div class="insight-grid">
+
+                    <div class="insight-card">
+                        <div class="insight-title">🎵 Paulinho da Viola — Tiny Desk Brasil</div>
+                        <div class="insight-date">13 de outubro de 2026</div>
+                        <div class="insight-description">Lenda do samba relembra 6 décadas de história em novo episódio do Tiny Desk Brasil (YouTube). Apresentação com família e convidados. Celebra legado artístico e processo criativo.</div>
+                        <div class="tags">
+                            <span class="tag">Música</span>
+                            <span class="tag">Samba</span>
+                            <span class="tag">Legado</span>
+                            <span class="tag">YouTube</span>
+                        </div>
+                        <div class="score-box">
+                            <div class="score-item">
+                                <span>Volume:</span><span class="score-bar" style="width: 40px;"></span> 2/3
+                            </div>
+                            <div class="score-item">
+                                <span>Velocidade:</span><span class="score-bar" style="width: 40px;"></span> 2/3
+                            </div>
+                            <div class="score-item">
+                                <span>Fit BR:</span><span class="score-bar" style="width: 60px;"></span> 3/3
+                            </div>
+                            <div class="score-item">
+                                <strong>Total: 7/9</strong>
+                            </div>
+                        </div>
+                        <a href="https://rollingstone.com.br/musica/paulinho-da-viola-relembra-6-decadas-de-historia-em-novo-episodio-do-tiny-desk-brasil/" class="insight-link">Ler matéria →</a>
+                    </div>
+
+                    <div class="insight-card">
+                        <div class="insight-title">🎬 Netflix × Copa do Mundo 2030</div>
+                        <div class="insight-date">13 de outubro de 2026</div>
+                        <div class="insight-description">Netflix fecha acordo exclusivo para transmitir 104 jogos da Copa 2030 na Espanha e Andorra. Primeiro grande torneio transmitido por plataforma de streaming. Estratégia de conteúdo desportivo premium.</div>
+                        <div class="tags">
+                            <span class="tag">Streaming</span>
+                            <span class="tag">Futebol</span>
+                            <span class="tag">Entretenimento</span>
+                            <span class="tag">Media Rights</span>
+                        </div>
+                        <div class="score-box">
+                            <div class="score-item">
+                                <span>Volume:</span><span class="score-bar" style="width: 60px;"></span> 3/3
+                            </div>
+                            <div class="score-item">
+                                <span>Velocidade:</span><span class="score-bar" style="width: 60px;"></span> 3/3
+                            </div>
+                            <div class="score-item">
+                                <span>Fit BR:</span><span class="score-bar" style="width: 60px;"></span> 3/3
+                            </div>
+                            <div class="score-item">
+                                <strong>Total: 9/9 ⭐</strong>
+                            </div>
+                        </div>
+                        <a href="https://exame.com/esporte/netflix-fecha-acordo-para-transmitir-a-copa-do-mundo-de-2030-na-espanha-e-em-andorra/" class="insight-link">Ler matéria →</a>
+                    </div>
+
+                    <div class="insight-card">
+                        <div class="insight-title">🤖 IA Autorreplicante em Home Devices</div>
+                        <div class="insight-date">13 de outubro de 2026</div>
+                        <div class="insight-description">Anthropic (Claude) publica pesquisa sobre autorreplicação de IA em aparelhos conectados. Avanços significativos, mas ainda com limitações de hardware. Debate sobre futuro da IA doméstica.</div>
+                        <div class="tags">
+                            <span class="tag">Tech</span>
+                            <span class="tag">IA</span>
+                            <span class="tag">Home Tech</span>
+                            <span class="tag">Futuro</span>
+                        </div>
+                        <div class="score-box">
+                            <div class="score-item">
+                                <span>Volume:</span><span class="score-bar" style="width: 40px;"></span> 2/3
+                            </div>
+                            <div class="score-item">
+                                <span>Velocidade:</span><span class="score-bar" style="width: 60px;"></span> 3/3
+                            </div>
+                            <div class="score-item">
+                                <span>Fit BR:</span><span class="score-bar" style="width: 40px;"></span> 2/3
+                            </div>
+                            <div class="score-item">
+                                <strong>Total: 7/9</strong>
+                            </div>
+                        </div>
+                        <a href="https://exame.com/inteligencia-artificial/ia-pode-estar-a-meses-de-se-replicar-em-aparelhos-domesticos-diz-claude/" class="insight-link">Ler matéria →</a>
+                    </div>
+
+                    <div class="insight-card">
+                        <div class="insight-title">🏠 Apple HomeView — Home IA</div>
+                        <div class="insight-date">13 de outubro de 2026</div>
+                        <div class="insight-description">Apple lança HomeView: tela doméstica com Siri IA que reconhece até 6 usuários. Controle de casa inteligente integrado. Lançamento em novembro por USD 299 (sem data para Brasil ainda).</div>
+                        <div class="tags">
+                            <span class="tag">Tech</span>
+                            <span class="tag">Apple</span>
+                            <span class="tag">Smart Home</span>
+                            <span class="tag">IA</span>
+                        </div>
+                        <div class="score-box">
+                            <div class="score-item">
+                                <span>Volume:</span><span class="score-bar" style="width: 40px;"></span> 2/3
+                            </div>
+                            <div class="score-item">
+                                <span>Velocidade:</span><span class="score-bar" style="width: 60px;"></span> 3/3
+                            </div>
+                            <div class="score-item">
+                                <span>Fit BR:</span><span class="score-bar" style="width: 20px;"></span> 1/3
+                            </div>
+                            <div class="score-item">
+                                <strong>Total: 6/9</strong>
+                            </div>
+                        </div>
+                        <a href="https://exame.com/tecnologia/apple-lanca-homeview-tela-com-ia-que-reconhece-moradores-e-controla-a-casa/" class="insight-link">Ler matéria →</a>
+                    </div>
+
+                    <div class="insight-card">
+                        <div class="insight-title">🍷 Turismo + Gastronomia em Alta</div>
+                        <div class="insight-date">13 de outubro de 2026</div>
+                        <div class="insight-description">Turismo brasileiro fatura R$ 25,5 bi em julho (melhor desde 2012). Bares e restaurantes crescem 7,4% (11º mês seguido). Copa do Mundo Feminina 2027 no Brasil projeta sustentação de receitas.</div>
+                        <div class="tags">
+                            <span class="tag">Gastronomia</span>
+                            <span class="tag">Turismo</span>
+                            <span class="tag">Economia</span>
+                            <span class="tag">Lifestyle</span>
+                        </div>
+                        <div class="score-box">
+                            <div class="score-item">
+                                <span>Volume:</span><span class="score-bar" style="width: 60px;"></span> 3/3
+                            </div>
+                            <div class="score-item">
+                                <span>Velocidade:</span><span class="score-bar" style="width: 40px;"></span> 2/3
+                            </div>
+                            <div class="score-item">
+                                <span>Fit BR:</span><span class="score-bar" style="width: 60px;"></span> 3/3
+                            </div>
+                            <div class="score-item">
+                                <strong>Total: 8/9</strong>
+                            </div>
+                        </div>
+                        <a href="https://valor.globo.com/patrocinado/dino/noticia/2026/10/13/turismo-impulsiona-bares-e-restaurantes-em-2026-1.ghtml" class="insight-link">Ler matéria →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OPORTUNIDADES POR CLIENTE -->
+            <div class="triggers-section">
+                <div class="section-title" style="color: #667eea; border-color: #667eea; margin-top: 0;">🎯 OPORTUNIDADES DE ATIVAÇÃO POR CLIENTE</div>
+                <div class="client-grid">
+
+                    <div class="client-card">
+                        <div class="client-name">🥃 woodford-reserve</div>
+                        <div class="trigger-list">
+                            <div class="trigger-item">
+                                <span class="trigger-action">content</span>
+                                <strong>Gastronomia + Beverage</strong> — turismo em alta
+                            </div>
+                            <div class="trigger-item">
+                                <span class="trigger-action">listening</span>
+                                <strong>Experiências premium</strong> — crescimento de bares
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="client-card">
+                        <div class="client-name">🥃 jack-daniels</div>
+                        <div class="trigger-list">
+                            <div class="trigger-item">
+                                <span class="trigger-action">post</span>
+                                <strong>Gastronomia trending</strong> — +7,4% restaurantes
+                            </div>
+                            <div class="trigger-item">
+                                <span class="trigger-action">listening</span>
+                                <strong>Lifestyle + turismo</strong> — padrão de consumo
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="client-card">
+                        <div class="client-name">🎬 Netflix-like</div>
+                        <div class="trigger-list">
+                            <div class="trigger-item">
+                                <span class="trigger-action">hijack</span>
+                                <strong>Copa 2030</strong> — streaming revoluciona rights
+                            </div>
+                            <div class="trigger-item">
+                                <span class="trigger-action">analysis</span>
+                                <strong>Media shift</strong> — novo modelo distribuição
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="client-card">
+                        <div class="client-name">💄 loreal-luxo</div>
+                        <div class="trigger-list">
+                            <div class="trigger-item">
+                                <span class="trigger-action">listening</span>
+                                <strong>Tiny Desk Brasil</strong> — conteúdo cultural premium
+                            </div>
+                            <div class="trigger-item">
+                                <span class="trigger-action">content</span>
+                                <strong>YouTube Creator</strong> — partnership oportunidade
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="client-card">
+                        <div class="client-name">🚗 toyota/lexus</div>
+                        <div class="trigger-list">
+                            <div class="trigger-item">
+                                <span class="trigger-action">tech-watch</span>
+                                <strong>IA autorreplicante</strong> — futuro de veículos
+                            </div>
+                            <div class="trigger-item">
+                                <span class="trigger-action">positioning</span>
+                                <strong>Smart home integration</strong> — ecosystem
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="client-card">
+                        <div class="client-name">📱 Tech Brands</div>
+                        <div class="trigger-list">
+                            <div class="trigger-item">
+                                <span class="trigger-action">analysis</span>
+                                <strong>Apple HomeView</strong> — mercado disputado
+                            </div>
+                            <div class="trigger-item">
+                                <span class="trigger-action">listening</span>
+                                <strong>IA adoption trend</strong> — consumer behavior
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CALENDÁRIO -->
+            <div class="section">
+                <div class="section-title">📅 PRÓXIMOS EVENTOS RELEVANTES</div>
+                <div class="headline-grid">
+                    <div class="headline">
+                        <div class="headline-title">Copa do Mundo Feminina 2027</div>
+                        <div class="headline-meta">Junho-julho 2027 • Brasil</div>
+                        <span class="tag">Esportes</span>
+                    </div>
+                    <div class="headline">
+                        <div class="headline-title">Tiny Desk Brasil — Temporada 2</div>
+                        <div class="headline-meta">Ongoing • YouTube + Itaú Live</div>
+                        <span class="tag">Música</span>
+                    </div>
+                    <div class="headline">
+                        <div class="headline-title">Apple HomeView Lançamento</div>
+                        <div class="headline-meta">Novembro 2026 • EUA</div>
+                        <span class="tag">Tech</span>
+                    </div>
+                    <div class="headline">
+                        <div class="headline-title">Copa 2030 (Primeiro jogo transmitido Netflix)</div>
+                        <div class="headline-meta">2030 • Espanha/Andorra</div>
+                        <span class="tag">Streaming</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>🎯 RADAR CULTURAL MUTATO — Coleta automática via Inoreader + análise TATO</p>
+            <p style="margin-top: 10px; font-size: 0.85em;">Gerado: 13 de outubro de 2026 às 10:45h | Próxima atualização: amanhã</p>
+        </div>
+    </div>
+</body>
+</html>

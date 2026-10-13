@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RADAR CULTURAL MUTATO — 2026-09-04</title>
+    <title>RADAR CULTURAL MUTATO — 13 de Outubro de 2026</title>
     <style>
         * {
             margin: 0;
@@ -12,7 +12,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: #333;
             line-height: 1.6;
@@ -38,13 +38,11 @@
         .header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
-            letter-spacing: -1px;
         }
 
         .header p {
             font-size: 1.1em;
             opacity: 0.95;
-            margin-bottom: 5px;
         }
 
         .meta {
@@ -67,16 +65,12 @@
             margin-bottom: 25px;
             padding-bottom: 10px;
             border-bottom: 3px solid #667eea;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
         .insight-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
-            margin-bottom: 30px;
         }
 
         .insight-card {
@@ -85,7 +79,6 @@
             padding: 20px;
             border-radius: 8px;
             transition: all 0.3s ease;
-            cursor: pointer;
         }
 
         .insight-card:hover {
@@ -93,42 +86,27 @@
             transform: translateY(-2px);
         }
 
-        .insight-card.lilac { border-left-color: #c9b1ff; }
-        .insight-card.pink { border-left-color: #ff69b4; }
-        .insight-card.mint { border-left-color: #00d4aa; }
-        .insight-card.sky { border-left-color: #00bfff; }
-        .insight-card.yellow { border-left-color: #ffd700; }
-        .insight-card.peach { border-left-color: #ffb380; }
-        .insight-card.aqua { border-left-color: #00e5cc; }
-        .insight-card.orange { border-left-color: #ff8c00; }
-
         .insight-title {
             font-size: 1.1em;
             font-weight: 600;
-            margin-bottom: 8px;
-            color: #222;
-        }
-
-        .insight-source {
-            font-size: 0.85em;
-            color: #666;
             margin-bottom: 10px;
+            color: #222;
         }
 
         .insight-date {
             font-size: 0.8em;
             color: #999;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .insight-description {
             font-size: 0.95em;
             color: #555;
-            line-height: 1.5;
             margin-bottom: 12px;
+            line-height: 1.5;
         }
 
-        .insight-tags {
+        .tags {
             display: flex;
             flex-wrap: wrap;
             gap: 6px;
@@ -157,21 +135,30 @@
             text-decoration: underline;
         }
 
-        .headline-box {
-            background: #f8f9fa;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-left: 5px solid #667eea;
+        .score-box {
+            background: #f0f4ff;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 12px;
+            font-size: 0.85em;
         }
 
-        .headline-box.orange { border-left-color: #ff8c00; }
-        .headline-box.peach { border-left-color: #ffb380; }
-        .headline-box.sky { border-left-color: #00bfff; }
-        .headline-box.pink { border-left-color: #ff69b4; }
-        .headline-box.aqua { border-left-color: #00e5cc; }
+        .score-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 3px 0;
+        }
 
-        .headlines {
+        .score-bar {
+            display: inline-block;
+            background: #667eea;
+            height: 4px;
+            border-radius: 2px;
+            width: 60px;
+            margin-left: 10px;
+        }
+
+        .headline-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 15px;
@@ -181,21 +168,14 @@
             padding: 15px;
             background: white;
             border-radius: 6px;
-            border-left: 4px solid;
+            border-left: 4px solid #667eea;
         }
-
-        .headline.orange { border-left-color: #ff8c00; }
-        .headline.peach { border-left-color: #ffb380; }
-        .headline.sky { border-left-color: #00bfff; }
-        .headline.pink { border-left-color: #ff69b4; }
-        .headline.aqua { border-left-color: #00e5cc; }
 
         .headline-title {
             font-weight: 600;
             font-size: 0.95em;
             color: #222;
             margin-bottom: 8px;
-            line-height: 1.4;
         }
 
         .headline-meta {
@@ -216,41 +196,6 @@
             text-decoration: underline;
         }
 
-        .calendar-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
-        }
-
-        .calendar-event {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-        }
-
-        .event-date {
-            font-weight: 700;
-            color: #667eea;
-            font-size: 1.1em;
-            margin-bottom: 5px;
-        }
-
-        .event-title {
-            font-size: 0.95em;
-            color: #222;
-            margin-bottom: 5px;
-        }
-
-        .event-type {
-            display: inline-block;
-            background: rgba(102, 126, 234, 0.1);
-            color: #667eea;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 0.75em;
-        }
-
         .triggers-section {
             background: #f0f4ff;
             padding: 25px;
@@ -258,10 +203,11 @@
             margin-top: 30px;
         }
 
-        .client-triggers {
+        .client-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
             gap: 20px;
+            margin-top: 20px;
         }
 
         .client-card {
@@ -312,24 +258,11 @@
             font-size: 0.9em;
         }
 
-        .score {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            background: rgba(102, 126, 234, 0.1);
-            color: #667eea;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-size: 0.75em;
-            font-weight: 600;
-        }
-
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 1.8em;
             }
-
-            .insight-grid, .headlines, .calendar-grid, .client-triggers {
+            .insight-grid, .headline-grid, .client-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -339,254 +272,170 @@
     <div class="container">
         <div class="header">
             <h1>🎯 RADAR CULTURAL MUTATO</h1>
-            <p>Tendências Culturais em Tempo Real</p>
+            <p>Tendências Culturais — Coleta Automática</p>
             <div class="meta">
-                <strong>Período:</strong> 3–4 de setembro de 2026 | <strong>Gerado:</strong> 4 de setembro às 07h00 | <strong>Tipo:</strong> Real-time
+                <strong>Data:</strong> 13 de outubro de 2026 | <strong>Período:</strong> últimas 48h | <strong>Tipo:</strong> Real-time
             </div>
         </div>
 
         <div class="content">
-            <!-- SÍNTESE -->
+            <!-- SÍNTESE INSIGHTS -->
             <div class="section">
-                <div class="section-title">📊 SÍNTESE DO DIA</div>
+                <div class="section-title">📊 5 INSIGHTS PRINCIPAIS</div>
                 <div class="insight-grid">
-                    <div class="insight-card orange">
-                        <div class="insight-title">Rock in Rio 2026: Epicentro Cultural</div>
-                        <div class="insight-date">4–7, 11–13 set</div>
-                        <div class="insight-description">O festival já lidera conversas em redes sociais com <strong>100.760 menções</strong> (32,6% acima de 2024). Fãs de K-pop (Stray Kids) dominam engajamento. Camarote Favela faz estreia testando modelo de expansão.</div>
-                        <div class="insight-tags">
-                            <span class="tag">Entretenimento</span>
+
+                    <div class="insight-card">
+                        <div class="insight-title">🎵 Paulinho da Viola — Tiny Desk Brasil</div>
+                        <div class="insight-date">13 de outubro de 2026</div>
+                        <div class="insight-description">Lenda do samba relembra 6 décadas de história em novo episódio do Tiny Desk Brasil (YouTube). Apresentação com família e convidados. Celebra legado artístico e processo criativo.</div>
+                        <div class="tags">
                             <span class="tag">Música</span>
-                            <span class="tag">Luxo</span>
-                            <span class="tag">K-pop</span>
-                        </div>
-                        <a href="https://www.meioemensagem.com.br/marketing/pre-rock-in-rio-gera-buzz-nas-redes-sociais" class="insight-link">Leia mais →</a>
-                    </div>
-
-                    <div class="insight-card mint">
-                        <div class="insight-title">Beauty Fair 2026: Ecosystem Expansion</div>
-                        <div class="insight-date">5–8 de setembro</div>
-                        <div class="insight-description">21ª edição na São Paulo com <strong>200+ mil visitas</strong> esperadas e <strong>R$ 1,3 bilhão</strong> em negócios. Novo setor de embalagens/sustentabilidade. Beauty Fair Co. diversifica em 5 frentes: profissional, varejo, exportação, tech, regionais.</div>
-                        <div class="insight-tags">
-                            <span class="tag">Beleza</span>
-                            <span class="tag">Tech</span>
-                            <span class="tag">Sustentabilidade</span>
-                            <span class="tag">B2B</span>
-                        </div>
-                        <a href="https://www.meioemensagem.com.br/marketing/beauty-fair-co-diversifica-negocios-e-cria-novas-frentes" class="insight-link">Leia mais →</a>
-                    </div>
-
-                    <div class="insight-card aqua">
-                        <div class="insight-title">Stella Artois × Instituto Inhotim: Sinergia Arte + Beverage</div>
-                        <div class="insight-date">Até 2030</div>
-                        <div class="insight-description">Patrocínio de 4 anos com maior museu a céu aberto da América Latina. Movimento de premium brands em direção a plataformas culturais como moeda de legitimidade e engajamento com públicos de alta renda.</div>
-                        <div class="insight-tags">
-                            <span class="tag">Bebidas</span>
-                            <span class="tag">Arte</span>
-                            <span class="tag">Luxo</span>
-                            <span class="tag">Patrocínio</span>
-                        </div>
-                        <a href="https://exame.com/marketing/stella-artois-anuncia-patrocinio-no-instituto-inhotim-ate-2030/" class="insight-link">Leia mais →</a>
-                    </div>
-
-                    <div class="insight-card pink">
-                        <div class="insight-title">TikTok: #Beleza em Ascensão</div>
-                        <div class="insight-date">Agora</div>
-                        <div class="insight-description">Trending topics: <strong>skincare trends, autocuidado, maquiagem</strong>, beauty hacks, glow-up culture. Discussões sobre <em>pretty privilege</em> e padrões de beleza ganham espaço. Criadores ensinam beauty routines científicas.</div>
-                        <div class="insight-tags">
-                            <span class="tag">Beleza</span>
-                            <span class="tag">Wellness</span>
-                            <span class="tag">Social</span>
-                            <span class="tag">UGC</span>
-                        </div>
-                        <span class="insight-link">Proxy: Spotify Viral 50 BR</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CAPA DOS VEÍCULOS -->
-            <div class="section">
-                <div class="section-title">📰 CAPA DOS PRINCIPAIS VEÍCULOS</div>
-                <div class="headline-box orange">
-                    <div class="headlines">
-                        <div class="headline orange">
-                            <div class="headline-title">Camarote Favela usa Rock in Rio para acelerar expansão</div>
-                            <div class="headline-meta">Meio e Mensagem • 4 de setembro</div>
-                            <a href="https://www.meioemensagem.com.br/marketing/camarote-favela-usa-rock-in-rio-para-acelerar-expansao" class="headline-link">Ler →</a>
-                        </div>
-
-                        <div class="headline orange">
-                            <div class="headline-title">Pré-Rock in Rio gera buzz nas redes sociais</div>
-                            <div class="headline-meta">Meio e Mensagem • 4 de setembro</div>
-                            <a href="https://www.meioemensagem.com.br/marketing/pre-rock-in-rio-gera-buzz-nas-redes-sociais" class="headline-link">Ler →</a>
-                        </div>
-
-                        <div class="headline orange">
-                            <div class="headline-title">Beauty Fair Co. diversifica negócios e cria novas frentes</div>
-                            <div class="headline-meta">Meio e Mensagem • 4 de setembro</div>
-                            <a href="https://www.meioemensagem.com.br/marketing/beauty-fair-co-diversifica-negocios-e-cria-novas-frentes" class="headline-link">Ler →</a>
-                        </div>
-
-                        <div class="headline orange">
-                            <div class="headline-title">Rock in Rio 2026: confira horários de shows do festival</div>
-                            <div class="headline-meta">Rolling Stone Brasil • 4 de setembro</div>
-                            <a href="https://rollingstone.com.br/musica/rock-in-rio-2026-confira-horarios-de-shows-do-festival/" class="headline-link">Ler →</a>
-                        </div>
-
-                        <div class="headline orange">
-                            <div class="headline-title">Stella Artois anuncia patrocínio no Instituto Inhotim até 2030</div>
-                            <div class="headline-meta">Exame • 4 de setembro</div>
-                            <a href="https://exame.com/marketing/stella-artois-anuncia-patrocinio-no-instituto-inhotim-ate-2030/" class="headline-link">Ler →</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- EM ALTA AGORA -->
-            <div class="section">
-                <div class="section-title">🔥 EM ALTA AGORA</div>
-
-                <h3 style="color: #667eea; margin: 20px 0 15px 0; font-size: 1.1em;">Google Trends Brasil</h3>
-                <div class="headline-box peach">
-                    <div class="headlines">
-                        <div class="headline peach">
-                            <div class="headline-title">cabelo curto</div>
-                            <div class="headline-meta">Trend em alta · Google Trends</div>
-                            <a href="https://trends.google.com/trends/explore?q=cabelo%20curto&geo=BR" class="headline-link">Ver trend →</a>
-                        </div>
-
-                        <div class="headline peach">
-                            <div class="headline-title">horóscopo do dia</div>
-                            <div class="headline-meta">Trend em alta · Google Trends</div>
-                            <a href="https://trends.google.com/trends/explore?q=hor%C3%B3scopo%20do%20dia&geo=BR" class="headline-link">Ver trend →</a>
-                        </div>
-
-                        <div class="headline peach">
-                            <div class="headline-title">xbox cloud gaming</div>
-                            <div class="headline-meta">Trend em alta · Google Trends</div>
-                            <a href="https://trends.google.com/trends/explore?q=xbox%20cloud%20gaming&geo=BR" class="headline-link">Ver trend →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <h3 style="color: #667eea; margin: 25px 0 15px 0; font-size: 1.1em;">Em Alta · TikTok (proxy: Spotify Viral 50 Brasil)</h3>
-                <div class="headline-box pink">
-                    <div class="headlines">
-                        <div class="headline pink">
-                            <div class="headline-title">Trending: Skincare routines científicas</div>
-                            <div class="headline-meta">TikTok · #beleza · 4 de setembro</div>
-                            <span class="tag">Wellness</span>
-                        </div>
-
-                        <div class="headline pink">
-                            <div class="headline-title">Trending: Beauty hacks & glow-up culture</div>
-                            <div class="headline-meta">TikTok · #beleza · 4 de setembro</div>
-                            <span class="tag">Beleza</span>
-                        </div>
-
-                        <div class="headline pink">
-                            <div class="headline-title">Trending: Autocuidado & postura feminina</div>
-                            <div class="headline-meta">TikTok · #beleza · 4 de setembro</div>
-                            <span class="tag">Cultura</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ARTE, CULTURA & COMPORTAMENTO -->
-            <div class="section">
-                <div class="section-title">🎨 ARTE, CULTURA & COMPORTAMENTO</div>
-                <div class="insight-grid">
-                    <div class="insight-card aqua">
-                        <div class="insight-title">K-Pop Global: Stray Kids lidera Rock in Rio</div>
-                        <div class="insight-date">11 de setembro</div>
-                        <div class="insight-description">Fãs de K-pop fizeram Stray Kids o artista mais comentado no pré-Rock in Rio. Headliner do Palco Mundo reflete ascensão do K-pop como fenômeno cultural de massa no Brasil.</div>
-                        <div class="insight-tags">
-                            <span class="tag">K-pop</span>
-                            <span class="tag">Música</span>
-                            <span class="tag">Fãs</span>
-                        </div>
-                    </div>
-
-                    <div class="insight-card aqua">
-                        <div class="insight-title">Elton John em Apresentação Única no Brasil</div>
-                        <div class="insight-date">7 de setembro</div>
-                        <div class="insight-description">Apresentação exclusiva no Rock in Rio. Ícone de rock e liberdade ganha destaque em conversas, refletindo busca por autenticidade e legado artístico.</div>
-                        <div class="insight-tags">
-                            <span class="tag">Música</span>
+                            <span class="tag">Samba</span>
                             <span class="tag">Legado</span>
+                            <span class="tag">YouTube</span>
                         </div>
+                        <div class="score-box">
+                            <div class="score-item">
+                                <span>Volume:</span><span class="score-bar" style="width: 40px;"></span> 2/3
+                            </div>
+                            <div class="score-item">
+                                <span>Velocidade:</span><span class="score-bar" style="width: 40px;"></span> 2/3
+                            </div>
+                            <div class="score-item">
+                                <span>Fit BR:</span><span class="score-bar" style="width: 60px;"></span> 3/3
+                            </div>
+                            <div class="score-item">
+                                <strong>Total: 7/9</strong>
+                            </div>
+                        </div>
+                        <a href="https://rollingstone.com.br/musica/paulinho-da-viola-relembra-6-decadas-de-historia-em-novo-episodio-do-tiny-desk-brasil/" class="insight-link">Ler matéria →</a>
                     </div>
 
-                    <div class="insight-card aqua">
-                        <div class="insight-title">Hub Cultural Camarote Favela: Sofisticação + Acolhimento</div>
-                        <div class="insight-date">4–7, 11–13 set</div>
-                        <div class="insight-description">Liderança feminina em empreendedorismo cultural. Camarote Favela posiciona-se como hub que conecta favela, sofisticação e entretenimento global — modelo replicável em moda, arte, festival.</div>
-                        <div class="insight-tags">
-                            <span class="tag">Liderança</span>
-                            <span class="tag">Inclusão</span>
+                    <div class="insight-card">
+                        <div class="insight-title">🎬 Netflix × Copa do Mundo 2030</div>
+                        <div class="insight-date">13 de outubro de 2026</div>
+                        <div class="insight-description">Netflix fecha acordo exclusivo para transmitir 104 jogos da Copa 2030 na Espanha e Andorra. Primeiro grande torneio transmitido por plataforma de streaming. Estratégia de conteúdo desportivo premium.</div>
+                        <div class="tags">
+                            <span class="tag">Streaming</span>
+                            <span class="tag">Futebol</span>
                             <span class="tag">Entretenimento</span>
+                            <span class="tag">Media Rights</span>
                         </div>
+                        <div class="score-box">
+                            <div class="score-item">
+                                <span>Volume:</span><span class="score-bar" style="width: 60px;"></span> 3/3
+                            </div>
+                            <div class="score-item">
+                                <span>Velocidade:</span><span class="score-bar" style="width: 60px;"></span> 3/3
+                            </div>
+                            <div class="score-item">
+                                <span>Fit BR:</span><span class="score-bar" style="width: 60px;"></span> 3/3
+                            </div>
+                            <div class="score-item">
+                                <strong>Total: 9/9 ⭐</strong>
+                            </div>
+                        </div>
+                        <a href="https://exame.com/esporte/netflix-fecha-acordo-para-transmitir-a-copa-do-mundo-de-2030-na-espanha-e-em-andorra/" class="insight-link">Ler matéria →</a>
                     </div>
 
-                    <div class="insight-card aqua">
-                        <div class="insight-title">Pretty Privilege & Beauty Standards em Debate</div>
-                        <div class="insight-date">Agora</div>
-                        <div class="insight-description">Conversas em TikTok desconstroem padrões de beleza únicos. Narrativa: "beleza é múltipla, inteligência é atrativa, autocuidado é radical". Movimento pós-estética.</div>
-                        <div class="insight-tags">
-                            <span class="tag">Comportamento</span>
-                            <span class="tag">Feminismo</span>
-                            <span class="tag">Saúde Mental</span>
+                    <div class="insight-card">
+                        <div class="insight-title">🤖 IA Autorreplicante em Home Devices</div>
+                        <div class="insight-date">13 de outubro de 2026</div>
+                        <div class="insight-description">Anthropic (Claude) publica pesquisa sobre autorreplicação de IA em aparelhos conectados. Avanços significativos, mas ainda com limitações de hardware. Debate sobre futuro da IA doméstica.</div>
+                        <div class="tags">
+                            <span class="tag">Tech</span>
+                            <span class="tag">IA</span>
+                            <span class="tag">Home Tech</span>
+                            <span class="tag">Futuro</span>
                         </div>
+                        <div class="score-box">
+                            <div class="score-item">
+                                <span>Volume:</span><span class="score-bar" style="width: 40px;"></span> 2/3
+                            </div>
+                            <div class="score-item">
+                                <span>Velocidade:</span><span class="score-bar" style="width: 60px;"></span> 3/3
+                            </div>
+                            <div class="score-item">
+                                <span>Fit BR:</span><span class="score-bar" style="width: 40px;"></span> 2/3
+                            </div>
+                            <div class="score-item">
+                                <strong>Total: 7/9</strong>
+                            </div>
+                        </div>
+                        <a href="https://exame.com/inteligencia-artificial/ia-pode-estar-a-meses-de-se-replicar-em-aparelhos-domesticos-diz-claude/" class="insight-link">Ler matéria →</a>
+                    </div>
+
+                    <div class="insight-card">
+                        <div class="insight-title">🏠 Apple HomeView — Home IA</div>
+                        <div class="insight-date">13 de outubro de 2026</div>
+                        <div class="insight-description">Apple lança HomeView: tela doméstica com Siri IA que reconhece até 6 usuários. Controle de casa inteligente integrado. Lançamento em novembro por USD 299 (sem data para Brasil ainda).</div>
+                        <div class="tags">
+                            <span class="tag">Tech</span>
+                            <span class="tag">Apple</span>
+                            <span class="tag">Smart Home</span>
+                            <span class="tag">IA</span>
+                        </div>
+                        <div class="score-box">
+                            <div class="score-item">
+                                <span>Volume:</span><span class="score-bar" style="width: 40px;"></span> 2/3
+                            </div>
+                            <div class="score-item">
+                                <span>Velocidade:</span><span class="score-bar" style="width: 60px;"></span> 3/3
+                            </div>
+                            <div class="score-item">
+                                <span>Fit BR:</span><span class="score-bar" style="width: 20px;"></span> 1/3
+                            </div>
+                            <div class="score-item">
+                                <strong>Total: 6/9</strong>
+                            </div>
+                        </div>
+                        <a href="https://exame.com/tecnologia/apple-lanca-homeview-tela-com-ia-que-reconhece-moradores-e-controla-a-casa/" class="insight-link">Ler matéria →</a>
+                    </div>
+
+                    <div class="insight-card">
+                        <div class="insight-title">🍷 Turismo + Gastronomia em Alta</div>
+                        <div class="insight-date">13 de outubro de 2026</div>
+                        <div class="insight-description">Turismo brasileiro fatura R$ 25,5 bi em julho (melhor desde 2012). Bares e restaurantes crescem 7,4% (11º mês seguido). Copa do Mundo Feminina 2027 no Brasil projeta sustentação de receitas.</div>
+                        <div class="tags">
+                            <span class="tag">Gastronomia</span>
+                            <span class="tag">Turismo</span>
+                            <span class="tag">Economia</span>
+                            <span class="tag">Lifestyle</span>
+                        </div>
+                        <div class="score-box">
+                            <div class="score-item">
+                                <span>Volume:</span><span class="score-bar" style="width: 60px;"></span> 3/3
+                            </div>
+                            <div class="score-item">
+                                <span>Velocidade:</span><span class="score-bar" style="width: 40px;"></span> 2/3
+                            </div>
+                            <div class="score-item">
+                                <span>Fit BR:</span><span class="score-bar" style="width: 60px;"></span> 3/3
+                            </div>
+                            <div class="score-item">
+                                <strong>Total: 8/9</strong>
+                            </div>
+                        </div>
+                        <a href="https://valor.globo.com/patrocinado/dino/noticia/2026/10/13/turismo-impulsiona-bares-e-restaurantes-em-2026-1.ghtml" class="insight-link">Ler matéria →</a>
                     </div>
                 </div>
             </div>
 
-            <!-- CALENDÁRIO -->
-            <div class="section">
-                <div class="section-title">📅 EVENTOS & DATAS RELEVANTES</div>
-                <div class="calendar-grid">
-                    <div class="calendar-event">
-                        <div class="event-date">4–7 set</div>
-                        <div class="event-title">Rock in Rio 2026 (Fase 1)</div>
-                        <div class="event-type">Cultural</div>
-                    </div>
-
-                    <div class="calendar-event">
-                        <div class="event-date">5–8 set</div>
-                        <div class="event-title">Beauty Fair 2026</div>
-                        <div class="event-type">Comercial</div>
-                    </div>
-
-                    <div class="calendar-event">
-                        <div class="event-date">11–13 set</div>
-                        <div class="event-title">Rock in Rio 2026 (Fase 2)</div>
-                        <div class="event-type">Cultural</div>
-                    </div>
-
-                    <div class="calendar-event">
-                        <div class="event-date">6–7 out</div>
-                        <div class="event-title">Beauty Fair Tech 2027</div>
-                        <div class="event-type">Comercial</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TRIGGERS POR CLIENTE -->
+            <!-- OPORTUNIDADES POR CLIENTE -->
             <div class="triggers-section">
-                <div class="section-title" style="color: #667eea;">🎯 OPORTUNIDADES DE ATIVAÇÃO POR CLIENTE</div>
+                <div class="section-title" style="color: #667eea; border-color: #667eea; margin-top: 0;">🎯 OPORTUNIDADES DE ATIVAÇÃO POR CLIENTE</div>
+                <div class="client-grid">
 
-                <div class="client-triggers">
                     <div class="client-card">
                         <div class="client-name">🥃 woodford-reserve</div>
                         <div class="trigger-list">
                             <div class="trigger-item">
-                                <span class="trigger-action">post</span>
-                                <strong>Coquetelaria premium no Rock in Rio</strong> — Camarote Favela + bebidas sofisticadas
+                                <span class="trigger-action">content</span>
+                                <strong>Gastronomia + Beverage</strong> — turismo em alta
                             </div>
                             <div class="trigger-item">
-                                <span class="trigger-action">content-piece</span>
-                                <strong>Behind-the-scenes</strong> — Stella Artois no Instituto Inhotim (sinergia arte + bebida)
+                                <span class="trigger-action">listening</span>
+                                <strong>Experiências premium</strong> — crescimento de bares
                             </div>
                         </div>
                     </div>
@@ -595,12 +444,26 @@
                         <div class="client-name">🥃 jack-daniels</div>
                         <div class="trigger-list">
                             <div class="trigger-item">
-                                <span class="trigger-action">hijack</span>
-                                <strong>#Whisky trends</strong> — Google Trends + TikTok em alta
+                                <span class="trigger-action">post</span>
+                                <strong>Gastronomia trending</strong> — +7,4% restaurantes
                             </div>
                             <div class="trigger-item">
                                 <span class="trigger-action">listening</span>
-                                <strong>Monitorar</strong> coquetelaria e cultura de bares pré-Rock in Rio
+                                <strong>Lifestyle + turismo</strong> — padrão de consumo
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="client-card">
+                        <div class="client-name">🎬 Netflix-like</div>
+                        <div class="trigger-list">
+                            <div class="trigger-item">
+                                <span class="trigger-action">hijack</span>
+                                <strong>Copa 2030</strong> — streaming revoluciona rights
+                            </div>
+                            <div class="trigger-item">
+                                <span class="trigger-action">analysis</span>
+                                <strong>Media shift</strong> — novo modelo distribuição
                             </div>
                         </div>
                     </div>
@@ -609,249 +472,78 @@
                         <div class="client-name">💄 loreal-luxo</div>
                         <div class="trigger-list">
                             <div class="trigger-item">
-                                <span class="trigger-action">post</span>
-                                <strong>Beauty Fair 2026</strong> — Presença em novo setor de embalagens/sustentabilidade
-                            </div>
-                            <div class="trigger-item">
-                                <span class="trigger-action">content-piece</span>
-                                <strong>Skincare científico</strong> — Aproveitar TikTok trends de rotinas baseadas em ciência
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="client-card">
-                        <div class="client-name">💄 loreal-derma</div>
-                        <div class="trigger-list">
-                            <div class="trigger-item">
-                                <span class="trigger-action">content-piece</span>
-                                <strong>#Beleza trending</strong> — Criar conte sobre desconstrução de padrões + autocuidado radical
-                            </div>
-                            <div class="trigger-item">
-                                <span class="trigger-action">post</span>
-                                <strong>Glow-up scientifically</strong> — Educational series baseada em hacks que viralizam
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="client-card">
-                        <div class="client-name">🚗 toyota</div>
-                        <div class="trigger-list">
-                            <div class="trigger-item">
-                                <span class="trigger-action">hijack</span>
-                                <strong>Rock in Rio transport + lifestyle</strong> — Conectar marca a experiência festival
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="client-card">
-                        <div class="client-name">🚗 lexus</div>
-                        <div class="trigger-list">
-                            <div class="trigger-item">
-                                <span class="trigger-action">content-piece</span>
-                                <strong>Luxo responsável</strong> — Sinergia com Stella Artois + Instituto Inhotim (eco-luxury)
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="client-card">
-                        <div class="client-name">🎵 outros clientes</div>
-                        <div class="trigger-list">
-                            <div class="trigger-item">
                                 <span class="trigger-action">listening</span>
-                                <strong>Monitor Rock in Rio buzz</strong> — Stray Kids, Elton John, Gilberto Gil mentions
+                                <strong>Tiny Desk Brasil</strong> — conteúdo cultural premium
+                            </div>
+                            <div class="trigger-item">
+                                <span class="trigger-action">content</span>
+                                <strong>YouTube Creator</strong> — partnership oportunidade
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="client-card">
+                        <div class="client-name">🚗 toyota/lexus</div>
+                        <div class="trigger-list">
+                            <div class="trigger-item">
+                                <span class="trigger-action">tech-watch</span>
+                                <strong>IA autorreplicante</strong> — futuro de veículos
+                            </div>
+                            <div class="trigger-item">
+                                <span class="trigger-action">positioning</span>
+                                <strong>Smart home integration</strong> — ecosystem
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="client-card">
+                        <div class="client-name">📱 Tech Brands</div>
+                        <div class="trigger-list">
+                            <div class="trigger-item">
+                                <span class="trigger-action">analysis</span>
+                                <strong>Apple HomeView</strong> — mercado disputado
                             </div>
                             <div class="trigger-item">
                                 <span class="trigger-action">listening</span>
-                                <strong>Beauty Fair 2026</strong> — B2B partnerships + innovation signals
+                                <strong>IA adoption trend</strong> — consumer behavior
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- NOTA META -->
-            <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 20px; border-radius: 8px; margin-top: 30px;">
-                <strong style="color: #856404;">📝 NOTA META:</strong>
-                <p style="color: #856404; margin-top: 8px;">
-                    ✓ Inoreader RSS: coleta completa de feeds curados com URLs canônicas.<br/>
-                    ✓ Google Trends: coleta de 3 tendências culturalmente relevantes.<br/>
-                    ✓ TikTok: coleta via fallback Spotify Viral 50 Brasil (hashtag #beleza não hidratou em modo automático).<br/>
-                    ✓ Instagram: leitura de formadores de opinião parcialmente concluída; 4+ insights capturados de comportamento/beleza/cultura pop.<br/>
-                    <strong>Dashboard gerado em: 4 de setembro de 2026 às 07h00 (UTC-3).</strong>
-                </p>
+            <!-- CALENDÁRIO -->
+            <div class="section">
+                <div class="section-title">📅 PRÓXIMOS EVENTOS RELEVANTES</div>
+                <div class="headline-grid">
+                    <div class="headline">
+                        <div class="headline-title">Copa do Mundo Feminina 2027</div>
+                        <div class="headline-meta">Junho-julho 2027 • Brasil</div>
+                        <span class="tag">Esportes</span>
+                    </div>
+                    <div class="headline">
+                        <div class="headline-title">Tiny Desk Brasil — Temporada 2</div>
+                        <div class="headline-meta">Ongoing • YouTube + Itaú Live</div>
+                        <span class="tag">Música</span>
+                    </div>
+                    <div class="headline">
+                        <div class="headline-title">Apple HomeView Lançamento</div>
+                        <div class="headline-meta">Novembro 2026 • EUA</div>
+                        <span class="tag">Tech</span>
+                    </div>
+                    <div class="headline">
+                        <div class="headline-title">Copa 2030 (Primeiro jogo transmitido Netflix)</div>
+                        <div class="headline-meta">2030 • Espanha/Andorra</div>
+                        <span class="tag">Streaming</span>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="footer">
-            <p>🎯 RADAR CULTURAL MUTATO — Coleta automática de tendências culturais | Publicado em <strong>izamutato.github.io/radar-mutato</strong></p>
-            <p style="margin-top: 10px; font-size: 0.85em;">Análise em tempo real • Sem patrocínios • Pronto para ação</p>
+            <p>🎯 RADAR CULTURAL MUTATO — Coleta automática via Inoreader + análise TATO</p>
+            <p style="margin-top: 10px; font-size: 0.85em;">Gerado: 13 de outubro de 2026 às 10:45h | Próxima atualização: amanhã</p>
         </div>
     </div>
-
-    <script id="radar-data" type="application/json">
-    {
-        "meta": {
-            "semana": "36/2026",
-            "periodo": "3-4 de setembro de 2026",
-            "gerado_em": "2026-09-04T07:00:00-03:00",
-            "tipo": "real",
-            "nota": "Coleta via Inoreader RSS, Google Trends, TikTok (fallback Spotify), Instagram (partial). URLs canônicas validadas."
-        },
-        "sintese": [
-            {
-                "id": "rock-in-rio-2026",
-                "titulo": "Rock in Rio 2026: Epicentro Cultural",
-                "descricao": "Festival lidera conversas com 100.760 menções em redes (+32,6% vs 2024). K-pop (Stray Kids) domina engajamento. Camarote Favela faz estreia testando expansão.",
-                "janela": "quente",
-                "territorios": ["entretenimento", "música", "cultura pop", "luxo"],
-                "clientes_aplicaveis": ["woodford-reserve", "jack-daniels", "toyota", "lexus"],
-                "score": {
-                    "volume": 3,
-                    "velocidade": 3,
-                    "fit_br": 3,
-                    "ativacao": 3,
-                    "total": 12
-                },
-                "referencias": [
-                    {"titulo": "Pré-Rock in Rio gera buzz nas redes sociais", "fonte": "Meio e Mensagem", "url": "https://www.meioemensagem.com.br/marketing/pre-rock-in-rio-gera-buzz-nas-redes-sociais", "data": "2026-09-04"},
-                    {"titulo": "Camarote Favela usa Rock in Rio para acelerar expansão", "fonte": "Meio e Mensagem", "url": "https://www.meioemensagem.com.br/marketing/camarote-favela-usa-rock-in-rio-para-acelerar-expansao", "data": "2026-09-04"},
-                    {"titulo": "Rock in Rio 2026: confira horários de shows do festival", "fonte": "Rolling Stone Brasil", "url": "https://rollingstone.com.br/musica/rock-in-rio-2026-confira-horarios-de-shows-do-festival/", "data": "2026-09-04"}
-                ]
-            },
-            {
-                "id": "beauty-fair-2026",
-                "titulo": "Beauty Fair 2026: Ecosystem Expansion",
-                "descricao": "21ª edição com 200k+ visitas esperadas e R$ 1,3 bi em negócios. Novo setor de embalagens/sustentabilidade. Beauty Fair Co. diversifica em 5 frentes.",
-                "janela": "quente",
-                "territorios": ["beleza", "tech", "sustentabilidade", "b2b"],
-                "clientes_aplicaveis": ["loreal-luxo", "loreal-derma"],
-                "score": {
-                    "volume": 3,
-                    "velocidade": 2,
-                    "fit_br": 3,
-                    "ativacao": 3,
-                    "total": 11
-                },
-                "referencias": [
-                    {"titulo": "Beauty Fair Co. diversifica negócios e cria novas frentes", "fonte": "Meio e Mensagem", "url": "https://www.meioemensagem.com.br/marketing/beauty-fair-co-diversifica-negocios-e-cria-novas-frentes", "data": "2026-09-04"}
-                ]
-            },
-            {
-                "id": "stella-inhotim",
-                "titulo": "Stella Artois × Instituto Inhotim: Sinergia Arte + Beverage",
-                "descricao": "Patrocínio de 4 anos. Premium brands em direção a plataformas culturais como moeda de legitimidade.",
-                "janela": "crescimento",
-                "territorios": ["bebidas", "arte", "luxo", "patrocinio"],
-                "clientes_aplicaveis": ["woodford-reserve", "jack-daniels", "lexus"],
-                "score": {
-                    "volume": 2,
-                    "velocidade": 2,
-                    "fit_br": 3,
-                    "ativacao": 2,
-                    "total": 9
-                },
-                "referencias": [
-                    {"titulo": "Stella Artois anuncia patrocínio no Instituto Inhotim até 2030", "fonte": "Exame", "url": "https://exame.com/marketing/stella-artois-anuncia-patrocinio-no-instituto-inhotim-ate-2030/", "data": "2026-09-04"}
-                ]
-            },
-            {
-                "id": "beleza-tiktok",
-                "titulo": "TikTok #Beleza: Skincare Trends & Glow-Up Culture",
-                "descricao": "Trending: skincare científico, autocuidado, beauty hacks. Pretty privilege em debate. Movimento pós-estética.",
-                "janela": "quente",
-                "territorios": ["beleza", "wellness", "comportamento", "tech"],
-                "clientes_aplicaveis": ["loreal-luxo", "loreal-derma"],
-                "score": {
-                    "volume": 3,
-                    "velocidade": 3,
-                    "fit_br": 3,
-                    "ativacao": 3,
-                    "total": 12
-                },
-                "referencias": [
-                    {"titulo": "Trending #beleza no TikTok — proxy Spotify Viral 50 Brasil", "fonte": "TikTok / Spotify", "url": "https://open.spotify.com/playlist/10nyoNXj8sae5MpUdPXsf1", "data": "2026-09-04"}
-                ]
-            }
-        ],
-        "triggers_por_cliente": {
-            "woodford-reserve": [
-                {"tendencia_id": "rock-in-rio-2026", "tipo_acao": "post", "janela": "quente", "data_sugerida": "2026-09-05", "trigger_titulo": "Coquetelaria premium no Rock in Rio", "trigger_descricao": "Ativar Camarote Favela + bebidas sofisticadas", "racional": "Festival é epicentro cultural; premium positioning"}
-            ],
-            "jack-daniels": [
-                {"tendencia_id": "beleza-tiktok", "tipo_acao": "hijack", "janela": "quente", "data_sugerida": "2026-09-04", "trigger_titulo": "#Whisky trends", "trigger_descricao": "Google Trends + TikTok em alta", "racional": "Oportunidade de lifestyle positioning"}
-            ],
-            "loreal-luxo": [
-                {"tendencia_id": "beauty-fair-2026", "tipo_acao": "post", "janela": "quente", "data_sugerida": "2026-09-06", "trigger_titulo": "Beauty Fair 2026", "trigger_descricao": "Presença em novo setor de embalagens/sustentabilidade", "racional": "B2B + innovation signal"},
-                {"tendencia_id": "beleza-tiktok", "tipo_acao": "content-piece", "janela": "quente", "data_sugerida": "2026-09-05", "trigger_titulo": "Skincare científico", "trigger_descricao": "Aproveitar TikTok trends de rotinas baseadas em ciência", "racional": "High engagement em educação beauty"}
-            ],
-            "loreal-derma": [
-                {"tendencia_id": "beleza-tiktok", "tipo_acao": "content-piece", "janela": "quente", "data_sugerida": "2026-09-04", "trigger_titulo": "#Beleza trending", "trigger_descricao": "Desconstrução de padrões + autocuidado radical", "racional": "Movimento pós-estética alinhado com wellness derma"},
-                {"tendencia_id": "beleza-tiktok", "tipo_acao": "post", "janela": "quente", "data_sugerida": "2026-09-05", "trigger_titulo": "Glow-up scientifically", "trigger_descricao": "Educational series baseada em hacks que viralizam", "racional": "Educational UGC drives conversion"}
-            ],
-            "toyota": [
-                {"tendencia_id": "rock-in-rio-2026", "tipo_acao": "hijack", "janela": "quente", "data_sugerida": "2026-09-06", "trigger_titulo": "Rock in Rio transport + lifestyle", "trigger_descricao": "Conectar marca a experiência festival", "racional": "Lifestyle integration opportunity"}
-            ],
-            "lexus": [
-                {"tendencia_id": "stella-inhotim", "tipo_acao": "content-piece", "janela": "crescimento", "data_sugerida": "2026-09-08", "trigger_titulo": "Luxo responsável", "trigger_descricao": "Sinergia com Stella Artois + Instituto Inhotim (eco-luxury)", "racional": "Premium + art positioning alignment"}
-            ]
-        },
-        "calendario": [
-            {"data": "2026-09-04", "evento": "Rock in Rio 2026 — Fase 1 inicia", "tipo": "cultural", "tendencias_relacionadas": ["rock-in-rio-2026"], "clientes_alvo": ["woodford-reserve", "jack-daniels", "toyota", "lexus"]},
-            {"data": "2026-09-05", "evento": "Beauty Fair 2026 — Evento", "tipo": "comercial", "tendencias_relacionadas": ["beauty-fair-2026"], "clientes_alvo": ["loreal-luxo", "loreal-derma"]},
-            {"data": "2026-09-07", "evento": "Elton John apresentação exclusiva — Rock in Rio", "tipo": "cultural", "tendencias_relacionadas": ["rock-in-rio-2026"], "clientes_alvo": []},
-            {"data": "2026-09-11", "evento": "Stray Kids headliner — Palco Mundo", "tipo": "cultural", "tendencias_relacionadas": ["rock-in-rio-2026"], "clientes_alvo": []},
-            {"data": "2026-10-06", "evento": "Beauty Fair Tech 2027 (previsto)", "tipo": "comercial", "tendencias_relacionadas": ["beauty-fair-2026"], "clientes_alvo": ["loreal-luxo", "loreal-derma"]}
-        ],
-        "manchetes": [
-            {
-                "categoria": "capa-veiculos",
-                "categoria_label": "Capa dos principais veículos",
-                "categoria_sub": "Top stories",
-                "color": "orange",
-                "items": [
-                    {"titulo": "Camarote Favela usa Rock in Rio para acelerar expansão", "fonte": "Meio e Mensagem", "data": "2026-09-04", "destaque": true, "url": "https://www.meioemensagem.com.br/marketing/camarote-favela-usa-rock-in-rio-para-acelerar-expansao"},
-                    {"titulo": "Pré-Rock in Rio gera buzz nas redes sociais", "fonte": "Meio e Mensagem", "data": "2026-09-04", "destaque": true, "url": "https://www.meioemensagem.com.br/marketing/pre-rock-in-rio-gera-buzz-nas-redes-sociais"},
-                    {"titulo": "Beauty Fair Co. diversifica negócios e cria novas frentes", "fonte": "Meio e Mensagem", "data": "2026-09-04", "destaque": true, "url": "https://www.meioemensagem.com.br/marketing/beauty-fair-co-diversifica-negocios-e-cria-novas-frentes"},
-                    {"titulo": "Rock in Rio 2026: confira horários de shows do festival", "fonte": "Rolling Stone Brasil", "data": "2026-09-04", "destaque": false, "url": "https://rollingstone.com.br/musica/rock-in-rio-2026-confira-horarios-de-shows-do-festival/"},
-                    {"titulo": "Stella Artois anuncia patrocínio no Instituto Inhotim até 2030", "fonte": "Exame", "data": "2026-09-04", "destaque": false, "url": "https://exame.com/marketing/stella-artois-anuncia-patrocinio-no-instituto-inhotim-ate-2030/"}
-                ]
-            },
-            {
-                "categoria": "trends-google",
-                "categoria_label": "Em alta · Google Trends Brasil",
-                "categoria_sub": "Termos em alta",
-                "color": "peach",
-                "items": [
-                    {"titulo": "cabelo curto", "fonte": "Google Trends", "data": "2026-09-04", "destaque": false, "url": "https://trends.google.com/trends/explore?q=cabelo%20curto&geo=BR"},
-                    {"titulo": "horóscopo do dia", "fonte": "Google Trends", "data": "2026-09-04", "destaque": false, "url": "https://trends.google.com/trends/explore?q=hor%C3%B3scopo%20do%20dia&geo=BR"},
-                    {"titulo": "xbox cloud gaming", "fonte": "Google Trends", "data": "2026-09-04", "destaque": false, "url": "https://trends.google.com/trends/explore?q=xbox%20cloud%20gaming&geo=BR"}
-                ]
-            },
-            {
-                "categoria": "trends-tiktok",
-                "categoria_label": "Em alta · TikTok (proxy: Spotify Viral 50 Brasil)",
-                "categoria_sub": "Tendências musicais / culturais",
-                "color": "pink",
-                "items": [
-                    {"titulo": "Skincare routines científicas", "fonte": "TikTok · #beleza", "data": "2026-09-04", "destaque": true, "url": "https://open.spotify.com/playlist/10nyoNXj8sae5MpUdPXsf1"},
-                    {"titulo": "Beauty hacks & glow-up culture", "fonte": "TikTok · #beleza", "data": "2026-09-04", "destaque": true, "url": "https://open.spotify.com/playlist/10nyoNXj8sae5MpUdPXsf1"},
-                    {"titulo": "Autocuidado & postura feminina", "fonte": "TikTok · #beleza", "data": "2026-09-04", "destaque": false, "url": "https://open.spotify.com/playlist/10nyoNXj8sae5MpUdPXsf1"}
-                ]
-            },
-            {
-                "categoria": "arte-cultura-comportamento",
-                "categoria_label": "Arte, Cultura & Comportamento",
-                "categoria_sub": "Cultural insights",
-                "color": "aqua",
-                "items": [
-                    {"titulo": "K-Pop Global: Stray Kids lidera Rock in Rio", "fonte": "Conversas em redes", "data": "2026-09-04", "destaque": true, "url": "https://www.meioemensagem.com.br/marketing/pre-rock-in-rio-gera-buzz-nas-redes-sociais"},
-                    {"titulo": "Elton John: Apresentação Única — Legado Artístico", "fonte": "Rolling Stone Brasil", "data": "2026-09-04", "destaque": true, "url": "https://rollingstone.com.br/musica/rock-in-rio-2026-confira-horarios-de-shows-do-festival/"},
-                    {"titulo": "Hub Cultural: Sofisticação + Acolhimento (Camarote Favela)", "fonte": "Meio e Mensagem", "data": "2026-09-04", "destaque": true, "url": "https://www.meioemensagem.com.br/marketing/camarote-favela-usa-rock-in-rio-para-acelerar-expansao"},
-                    {"titulo": "Pretty Privilege & Beauty Standards em Debate", "fonte": "TikTok conversations", "data": "2026-09-04", "destaque": false, "url": "https://open.spotify.com/playlist/10nyoNXj8sae5MpUdPXsf1"}
-                ]
-            }
-        ]
-    }
-    </script>
 </body>
 </html>
